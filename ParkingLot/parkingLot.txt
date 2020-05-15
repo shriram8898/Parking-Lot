@@ -1,0 +1,56 @@
+public interface IparkedVehicle:Iparking
+{
+string vehicleId{get;set;}
+string vehicleType{get;set;}
+DateTime timeIn{get;set;}
+DateTime timeOut{get;set;}
+int totalAmnt{get;set;}
+int Amnt{get;set;}
+}
+
+Class parkedVehicle:IparkedVehicle
+{
+public string vehicleId { get; set; }
+Public string vehicleType {get; set ;}
+public int floors { get; set; }
+public int spots { get; set; }
+DateTime timeIn{get;set;}
+DateTime timeOut{get;set;}
+int totalAmnt{get;set;}
+int Amnt{get;set;}
+public ParkedVehicle(string id,string type,int floor,int spot)
+}
+
+public interface Iparking
+{
+public int floors{get;set;}
+public int spots{get;set;}
+}
+
+class ParkingLot:Iparking
+{
+public int floors { get; set; }
+public int spots { get; set; }
+List<ParkedVehicle> pv = new List<ParkedVehicle>();
+Level[] levels;
+public ParkingLot(int floors,int spots) 
+public void bookSlot(string type,string number)
+public void removeVehicle(string number)
+public void viewParkedVehicle()
+}
+public interface Ispots
+{
+int[] bikeSpot { get; set; }
+int[] carSpot { get; set; }
+int[] busSpot { get; set; }
+}
+class Level:Ispot
+{
+public int[] bikeSpot { get; set; }
+public int[] carSpot { get; set; }
+public int[] busSpot { get; set; }
+public Level(int spots)
+public void printf()
+public int GetSpot(string type)
+void print(int[] arr)
+}
